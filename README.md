@@ -1,1 +1,108 @@
-# cics-legacy-to-modern
+# CICS-Legacy-to-Modern-CRUD
+
+Modernizing a COBOL CRUD Application: Mainframe Screens to Modern Architecture.
+
+<p align="center">
+  <img src="images/mainframe-modernization-dashboard.png" alt="CICS Modernization Dashboard" width="700"/>
+  <br>
+  <em>CICS Mainframe Modernization Project (Sept 2026)</em>
+</p>
+
+## Overview
+
+This repository documents the modernization path for a legacy COBOL CRUD (Create, Read, Update, Delete) application running under CICS (Customer Information Control System) on an IBM z/OS mainframe. The project transitions a fixed-field terminal application into a flexible, service-oriented architecture.
+
+---
+
+## Technical Components & File Directory
+
+This project combines traditional mainframe assets with modern DevOps tooling. The source code is organized as follows:
+
+### [<img src="https://raw.githubusercontent.com/microsoft/vscode/main/resources/linux/code.png" width="20" alt="VS Code icon" /> VS Code / TSO/ISPF Tools](#vscode-tools)
+
+This section includes links and cross-references for developing with IBM Z Open Editor:
+
+| Asset | Description |
+| :--- | :--- |
+| **Code Links PDF** | Documentation linking modern editor features to TSO/ISPF counterparts. |
+| **MAP: JCL** | JCL source for BMS Mapset compilation. |
+| **Copybook Source** | Shared COBOL definitions (Linkage Section). |
+
+---
+
+### [<img src="https://img.icons8.com/wired/64/000000/mainframe.png" width="20" alt="Mainframe icon" /> TSO/ISPF & VSAM Data](#mainframe-source)
+
+Source and definitions for the mainframe components:
+
+- `mainframe/jcl/VSAM_DEF.jcl`: VSAM KSDS cluster definition.
+- `mainframe/cobol/CICS_CRUD.cbl`: Main COBOL CICS program source.
+- `mainframe/bms/CICS_MAP.bms`: Basic Mapping Support mapset source.
+
+### VSAM Operations & Workflows
+
+Documented application flow and command usage for database operations:
+
+| Operation | Command Example | Documentation |
+| :---: | :--- | :--- |
+| **ADD** | `EXEC CICS WRITE` | [Detailed Workflow](images/VSAM_ADD.png) |
+| **DELETE** | `EXEC CICS DELETE` | [Detailed Workflow](images/VSAM_DELETE.png) |
+| **UPDATE** | `EXEC CICS REWRITE` | [Detailed Workflow](images/VSAM_UPDATE.png) |
+| **BROWSE** | `EXEC CICS STARTBR`/`READNEXT` | [Detailed Workflow](images/VSAM_BROWSE.png) |
+
+---
+
+## [<img src="https://img.icons8.com/wired/64/000000/command-line.png" width="20" alt="Command Line icon" /> Mainframe Commands Used](#commands)
+
+The following CICS commands are utilized for testing, debugging, and system management. Click the links for application-specific usage guides:
+
+*   [**CEDF:** CICS Execution Diagnostic Facility usage guide](images/CEDF_usage.png)
+*   [**CEMT:** CICS Master Terminal transaction usage guide](images/CEMT_usage.png)
+
+---
+
+## Modernized Components
+
+We have integrated the following modernized components:
+
+*   **Container-Based Services** for elastic scaling.
+*   **Web Interface (HTML/CSS/JS)** providing a responsive front-end.
+*   **REST APIs (Python Flask)** for secure, flexible service calls.
+*   **PostgreSQL DB** for high-performance open-source data management.
+
+## Migration Steps
+
+The application transition followed these logic steps:
+
+1.  **Map Field Definition:** Apply unprotected status to key screen fields.
+2.  **Data Retrieval:** 'Enter Year' function returns all other record fields.
+
+## Project Transition
+
+We transformed the direct-connect mainframe screens to a service-based architecture:
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <h3>BEFORE: Original Screen Capture</h3>
+      <img src="images/CEDF_usage.png" alt="Original CICS Screen" width="400"/>
+    </td>
+    <td width="50%" align="center">
+      <h3>AFTER: Modernized Screen Capture</h3>
+      <img src="images/mainframe-modernization-dashboard.png" alt="Modern Web Screen" width="400"/>
+    </td>
+  </tr>
+</table>
+
+## Project Status
+
+This modernization effort is currently:
+
+<p align="center">
+  **Wrapping Up Soon**
+  <br>
+  <img src="images/project_status_bar.png" alt="Project status: wrapping up" width="300" />
+</p>
+
+---
+
+[Github Repository Mockup Visualization Reference](images/README_Storyboard.png)
