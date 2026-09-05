@@ -102,7 +102,72 @@ This modernization effort is currently:
   <br>
   <img src="images/project_status_bar.png" alt="Project status: wrapping up" width="300" />
 </p>
+<table border="0" width="100%">
+<tr>
+<td width="50%" valign="top">
+
+### 🛠️ VS Code / TSO/ISPF Tools
+* [Code Links PDF](./docs/code-links.pdf)
+* [MAP: JCL](./jcl/map.jcl)
+* [Copybook Source](./cobol/copybooks/)
 
 ---
+
+### 💾 TSO/ISPF & VSAM Data
+* **VSAM:** JCL
+* **Program Source**
+* **BMS Mapset Source**
+* **VSAM Operations:** `ADD`, `DELETE`, `BROWSE`, `UPDATE`
+
+---
+
+### 💻 Mainframe Commands Used
+* `CEMT`, `CEDF`: Brief command usage
+* `CEDF`: Operation used commands usage
+* `CEMT`: Add three field command usage
+* `BROWSE`: Add/Delete usage
+* `UPDATE`: Update/Find command usage
+
+---
+
+### 🎥 CICS Demo (Sept 2026)
+[![CICS Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+</td>
+<td width="50%" valign="top">
+
+### 🚀 Modernized Components
+**Modernized components added:**
+* Container-Based Services
+* Web Interface (HTML/CSS/JS)
+* REST APIs (Python Flask)
+* PostgreSQL DB
+
+---
+
+### 📋 Migration Steps
+`1. Apply unprotected to key fields` ➔ `2. Enter Year: Returns other fields`
+
+---
+
+### 📸 Project Transition
+
+**BEFORE: Original Screen Capture**
+![BEFORE](./assets/before-screen.png)
+
+**AFTER: Modernized Screen Capture**
+![AFTER](./assets/after-screen.png)
+
+---
+
+### 📊 Project Status
+**Project Wrapping Up Soon**
+`[██████████████████░░] 90%`
+
+</td>
+</tr>
+</table>
+---
+
 
 [Github Repository Mockup Visualization Reference](images/README_Storyboard.png)
