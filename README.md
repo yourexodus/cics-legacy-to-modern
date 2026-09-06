@@ -3,7 +3,7 @@
 Modernizing a COBOL CRUD Application: Mainframe Screens to Modern Architecture.
 
 <p align="center">
-  <img src="images/mainframe-modernization-dashboard.png" alt="CICS Modernization Dashboard" width="700"/>
+  <img src="images/mainframe-menu.png" alt="CICS Modernization Dashboard" width="700"/>
   <br>
   <em>CICS Mainframe Modernization Project (Sept 2026)</em>
 </p>
