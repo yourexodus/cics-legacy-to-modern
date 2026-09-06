@@ -34,9 +34,9 @@ This section includes links and cross-references for developing with IBM Z Open 
 
 Source and definitions for the mainframe components:
 
-- `mainframe/jcl/VSAM_DEF.jcl`: VSAM KSDS cluster definition.<img src="images/IMG_5107.jpeg" alt="CICS Modernization Dashboard" width="700"/>
-- `mainframe/cobol/CICS_CRUD.cbl`: Main COBOL CICS program source.
-- `mainframe/bms/CICS_MAP.bms`: Basic Mapping Support mapset source.
+- `mainframe/jcl/VSAM_DEF.jcl`: VSAM KSDS cluster definition.<img src="images/IMG_5107.jpeg" alt="vsam" width="700"/>
+- `mainframe/cobol/CICS_CRUD.cbl`: Main COBOL CICS program source.<img src="images/IMG_5114.jpeg" alt="CICS cobol" width="700"/>
+- `mainframe/bms/CICS_MAP.bms`: Basic Mapping Support mapset source.<img src="images/IMG_5109.jpeg" alt=“mapset" width="700"/>
 
 ### VSAM Operations & Workflows
 
