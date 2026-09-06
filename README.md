@@ -92,20 +92,15 @@ The application transition followed these logic steps:
 
 ## Project Transition
 
-We transformed the direct-connect mainframe screens to a service-based architecture:
+### 📸 Project Transition
 
-<table align="center" width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <h3>BEFORE: Original Screen Capture</h3>
-      <img src="images/CEDF_usage.png" alt="Original CICS Screen" width="400"/>
-    </td>
-    <td width="50%" align="center">
-      <h3>AFTER: Modernized Screen Capture</h3>
-      <img src="images/mainframe-modernization-dashboard.png" alt="Modern Web Screen" width="400"/>
-    </td>
-  </tr>
-</table>
+**BEFORE: Original Screen Capture**  
+[![Original Screen Capture](path/to/before-image.png)](https://www.linkedin.com/feed/update/urn:li:ugcPost:7502364357662658560)
+
+Check out the update on [LinkedIn](https://www.linkedin.com/feed/update/urn:li:ugcPost:7502364357662658560).
+
+**AFTER: Modernized Screen Capture**  
+![Modernized Screen Capture](path/to/after-image.png)
 
 ## Project Status
 
