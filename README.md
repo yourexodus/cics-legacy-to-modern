@@ -55,7 +55,7 @@ Documented application flow and command usage for database operations:
 
 The following CICS commands are utilized for testing, debugging, and system management. Click the links for application-specific usage guides:
 
-### [CICS Troubleshooting Guide (PDF)](./docs/Troubleshootion.pdf)
+### [CICS Troubleshooting Guide (PDF)](./Troubleshootion.pdf)
 <p align="center">
   <img src="images/IMG_5106.jpeg" alt="CICS Modernization Dashboard" width="700"/>
   <br>
