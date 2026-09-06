@@ -17,6 +17,11 @@ This repository documents the modernization path for a legacy COBOL CRUD (Create
 ## Technical Components & File Directory
 
 This project combines traditional mainframe assets with modern DevOps tooling. The source code is organized as follows:
+## 📸 Project Resources
+
+Below is a snapshot of the resources created during the CICS Legacy-to-Modern project, including the COBOL program, BMS map, JCL, VSAM definitions, CICS commands, troubleshooting documentation, and development tools.
+
+![CICS Legacy-to-Modern Project Resources](images/resourcegroups.jpeg)
 
 ### [<img src="https://raw.githubusercontent.com/microsoft/vscode/main/resources/linux/code.png" width="20" alt="VS Code icon" /> VS Code / TSO/ISPF Tools](#vscode-tools)
 
