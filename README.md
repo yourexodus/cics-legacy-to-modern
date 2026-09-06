@@ -21,7 +21,7 @@ This project combines traditional mainframe assets with modern DevOps tooling. T
 
 Below is a snapshot of the resources created during the CICS Legacy-to-Modern project, including the COBOL program, BMS map, JCL, VSAM definitions, CICS commands, troubleshooting documentation, and development tools.
 
-![CICS Legacy-to-Modern Project Resources](images/resourcegroups.jpeg)
+![CICS Legacy-to-Modern Project Resources](images/IMG_5113.jpeg)
 
 ### [<img src="https://raw.githubusercontent.com/microsoft/vscode/main/resources/linux/code.png" width="20" alt="VS Code icon" /> VS Code / TSO/ISPF Tools](#vscode-tools)
 
