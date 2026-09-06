@@ -55,8 +55,12 @@ Documented application flow and command usage for database operations:
 
 The following CICS commands are utilized for testing, debugging, and system management. Click the links for application-specific usage guides:
 
-*   [**CEDF:** CICS Execution Diagnostic Facility usage guide](images/CEDF_usage.png)
-*   [**CEMT:** CICS Master Terminal transaction usage guide](images/CEMT_usage.png)
+### [CICS Troubleshooting Guide (PDF)](./docs/Troubleshooting.pdf.pdf)
+Quick-reference document covering:
+
+* `CEDA DEFINE` and `INSTALL` commands for mapsets and libraries [[PDF](./Troubleshooting.pdf)][cite: 1]
+* `CEMT SET PROGRAM NEWCOPY` execution and status checks [[PDF](./Troubleshooting.pdf)][cite: 1]
+* Resolving `LOAD FAILED` errors and setting up custom `DSNAME` allocations [[PDF](./Troubleshooting.pdf)][cite: 1]
 
 ---
 
