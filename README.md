@@ -168,7 +168,11 @@ This modernization effort is currently:
 
 **BEFORE: Original Screen Capture**
 ![BEFORE](./assets/before-screen.png)
+Here is my latest project update:
 
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7502364357662658560?collapsed=1" height="454" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+Check out the repository below for details.
 **AFTER: Modernized Screen Capture**
 ![AFTER](./assets/after-screen.png)
 
