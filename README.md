@@ -173,10 +173,19 @@ Check out the repository below for details.
 
 ---
 
-### 📊 Project Status
-**Project Wrapping Up Soon**
-`[██████████████████░░] 90%`
-
+### 📊 Example of issues I experienced
+** VSAM Record Update Issue**
+ 
+Problem: When I updated a record, fields like Role/Title and Skills were getting blanked out.
+Cause: The program was moving the screen data before the VSAM READ UPDATE, which replaced my changes with the old record.
+Fix: I changed the order so the screen data is moved after the READ UPDATE and before the REWRITE. This allowed my updated information to save correctly.
+![AFTER](./assets/after-screen.png)
+**VSAM Record Layout Issue**
+ 
+Problem: Some data was shifting, getting truncated, or not saving correctly.
+Cause: The Working-Storage record layout didn't fully match the VSAM record structure.
+Fix: I aligned the record layout to the VSAM file at 205 bytes, making sure the fields matched correctly when moving data between the screen and VSAM
+![AFTER](./assets/after-screen.png)
 </td>
 </tr>
 </table>
