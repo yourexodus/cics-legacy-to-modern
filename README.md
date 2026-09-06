@@ -52,14 +52,15 @@ Documented application flow and command usage for database operations:
 ---
 
 ## [<img src="https://img.icons8.com/wired/64/000000/command-line.png" width="20" alt="Command Line icon" /> Mainframe Commands Used](#commands)
+
+The following CICS commands are utilized for testing, debugging, and system management. Click the links for application-specific usage guides:
+
+### [CICS Troubleshooting Guide (PDF)](./docs/Troubleshootion.pdf)
 <p align="center">
-  <img src="images/troubleshooting.png" alt="CICS Modernization Dashboard" width="700"/>
+  <img src="images/IMG_5106.jpeg" alt="CICS Modernization Dashboard" width="700"/>
   <br>
   <em>CICS Mainframe Modernization Project (Sept 2026)</em>
 </p>
-The following CICS commands are utilized for testing, debugging, and system management. Click the links for application-specific usage guides:
-
-### [CICS Troubleshooting Guide (PDF)](./docs/Troubleshooting.pdf.pdf)
 Quick-reference document covering:
 
 * `CEDA DEFINE` and `INSTALL` commands for mapsets and libraries [[PDF](./Troubleshooting.pdf)][cite: 1]
