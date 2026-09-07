@@ -99,7 +99,7 @@ The application transition followed these logic steps:
 
 Watch the video demonstration of my IBM CICS Legacy-to-Modern application:
 
-[![IBM CICS Legacy-to-Modern Project](https://img.youtube.com/vi/JeWW_vK4y34/maxresdefault.jpg)](https://youtu.be/JeWW_vK4y34)
+[![IBM CICS Legacy-to-Modern Project](https://img.youtube.com/vi/JeWW_vK4y34/maxresdefault.jpg)]([https://youtu.be/JeWW_vK4y34](https://youtu.be/JeWW_vK4y34?si=duCaV1liGZre0cfw))
 
 **▶️ Watch the Project Demonstration on YouTube**
 
