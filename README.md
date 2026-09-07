@@ -86,21 +86,28 @@ This step was part of rebuilding the mainframe application environment rather th
 ## STEP 3 — Create VSAM dataset
 connect dataset to file nickname Skills
 in Cics.
-  
+  <td valign="top">
+<img src="images/IMG_5107.jpeg" alt="COBOL CICS Program" 
 
-## STEP 4 - Connect the COBOL Program to the MAP
+</td>
+
+</td>
+<tr>
+
+  
+<td valign="top">
+
+## STEP 4 — Connect the COBOL Program to the MAP
 
 The COBOL program is connected to the CICS application resources using the required names and definitions.
 
 The program is connected using:
 
-- **Copybook Name** — provides the generated MAP field definitions to the COBOL program.
-- **Transaction ID** — identifies the CICS transaction used to invoke the program.
-- **VSAM Nickname** — identifies the VSAM file used by the program for CRUD processing.
+* **Copybook Name** — provides the generated MAP field definitions to the COBOL program.
+* **Transaction ID** — identifies the CICS transaction used to invoke the program.
+* **VSAM Nickname** — identifies the CICS file definition used by the program for CRUD processing.
 
-These definitions allow the COBOL program, CICS transaction, MAP, and VSAM file to work together.
-
-
+These definitions allow the **COBOL program, CICS transaction, MAP, and VSAM file** to work together.
 
 The COBOL CICS program uses the generated map and copybook definitions to communicate with the terminal screen.
 
@@ -109,9 +116,17 @@ This is where the screen fields, COBOL working-storage definitions, and CICS app
 </td>
 
 <td valign="top">
-<img src="images/IMG_5107.jpeg" alt="COBOL CICS Program" 
+
+### COBOL / CICS PROGRAM CONNECTION
+
+<img src="images/IMG_5114.jpeg"
+  alt="COBOL CICS Program"
+  width="500"/>
 
 </td>
+</tr>
+
+
 </tr>
 
 <tr>
