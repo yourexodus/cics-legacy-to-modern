@@ -83,7 +83,12 @@ This step was part of rebuilding the mainframe application environment rather th
 <tr>
 <td valign="top">
 
-## STEP 3 — Connect the COBOL Program to the MAP
+## STEP 3 — Create VSAM dataset
+connect dataset to file nickname Skills
+in Cics.
+  <img src="images/IMG_5197.jpeg" alt="COBOL CICS Program" width="500"/>
+
+## STEP 4 - Connect the COBOL Program to the MAP
 
 The COBOL program is connected to the CICS application resources using the required names and definitions.
 
@@ -115,7 +120,7 @@ This is where the screen fields, COBOL working-storage definitions, and CICS app
 <tr>
 <td valign="top">
 
-## STEP 4 — Compile & Link the Program
+## STEP 5 — Compile & Link the Program
 
 The COBOL program and supporting resources must be compiled and linked before they can be executed by CICS.
 
@@ -135,7 +140,7 @@ This required working with JCL and the mainframe development environment.
 <tr>
 <td valign="top">
 
-## STEP 5 — Define & Install CICS Resources
+## STEP 6 — Define & Install CICS Resources
 
 After building the application components, I worked with CICS resource definitions and installation commands.
 
@@ -167,7 +172,7 @@ These resources are what allow CICS to locate and execute the application compon
 <tr>
 <td valign="top">
 
-## STEP 6 — Test & Debug
+## STEP 7 — Test & Debug
 
 Testing was a major part of the project.
 
@@ -206,7 +211,7 @@ This included troubleshooting:
 <tr>
 <td valign="top">
 
-## STEP 7 — Fix the VSAM UPDATE Logic
+## STEP 8 -  Fix the VSAM UPDATE Logic
 
 One of the problems I encountered involved updating an existing VSAM record.
 
@@ -246,7 +251,7 @@ This allowed the updated information to be saved correctly.
 <tr>
 <td valign="top">
 
-## STEP 8 — Fix the VSAM Record Layout
+## STEP 9 — Fix the VSAM Record Layout
 
 Another issue involved the size and structure of the VSAM record.
 
@@ -276,7 +281,7 @@ This ensured that the fields matched correctly when moving data between the scre
 <tr>
 <td valign="top">
 
-## STEP 9 — Working CICS Application
+## STEP 10 — Working CICS Application
 
 After working through the build, configuration, testing, and debugging process, the application reached a working state.
 
