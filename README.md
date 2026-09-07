@@ -85,6 +85,18 @@ This step was part of rebuilding the mainframe application environment rather th
 
 ## STEP 3 — Connect the COBOL Program to the MAP
 
+The COBOL program is connected to the CICS application resources using the required names and definitions.
+
+The program is connected using:
+
+- **Copybook Name** — provides the generated MAP field definitions to the COBOL program.
+- **Transaction ID** — identifies the CICS transaction used to invoke the program.
+- **VSAM Nickname** — identifies the VSAM file used by the program for CRUD processing.
+
+These definitions allow the COBOL program, CICS transaction, MAP, and VSAM file to work together.
+
+
+
 The COBOL CICS program uses the generated map and copybook definitions to communicate with the terminal screen.
 
 This is where the screen fields, COBOL working-storage definitions, and CICS application logic have to line up correctly.
