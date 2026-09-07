@@ -109,6 +109,7 @@ This is where the screen fields, COBOL working-storage definitions, and CICS app
 </td>
 
 <td valign="top">
+<img src="images/IMG_5107.jpeg" alt="COBOL CICS Program" width="500"/>
 
 ### COBOL / CICS PROGRAM
 
