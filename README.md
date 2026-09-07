@@ -161,14 +161,18 @@ This modernization effort is currently:
 
 ### 📸 Project Transition
 
-**BEFORE: Original Screen Capture**
+### 📸 Project Transition
+
+**BEFORE: Original Screen Capture**  
 ![BEFORE](./assets/before-screen.png)
+
 Here is my latest project update:
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7502364357662658560?collapsed=1" height="454" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+[![View LinkedIn Post](https://img.shields.io/badge/LinkedIn-View_Project_Update-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/feed/update/urn:li:ugcPost:7502364357662658560)
 
-Check out the repository below for details.
-**AFTER: Modernized Screen Capture**
+Check out the repository below for details.  
+
+**AFTER: Modernized Screen Capture**  
 ![AFTER](./assets/after-screen.png)
 
 ---
