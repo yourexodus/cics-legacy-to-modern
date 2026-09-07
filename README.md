@@ -86,7 +86,7 @@ This step was part of rebuilding the mainframe application environment rather th
 ## STEP 3 — Create VSAM dataset
 connect dataset to file nickname Skills
 in Cics.
-  <img src="images/IMG_5197.jpeg" alt="COBOL CICS Program" width="500"/>
+  
 
 ## STEP 4 - Connect the COBOL Program to the MAP
 
