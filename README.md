@@ -431,22 +431,11 @@ Watch the complete demonstration of the CICS Legacy-to-Modern project.
 
 <p align="center">
 
-<a href="https://youtu.be/JeWW_vK4y34">
-
-<img src="https://img.youtube.com/vi/JeWW_vK4y34/maxresdefault.jpg"
-     alt="CICS Legacy-to-Modern Project Demonstration"
-     width="700"/>
-
-</a>
-
-<br>
-
 ### 🎥 Project Demonstration
 
-[![CICS Legacy-to-Modern Demo](https://img.youtube.com/vi/JeWW_vK4y34/maxresdefault.jpg)](https://www.youtube.com/watch?v=JeWW_vK4y34&t=79s)
+[![Watch the CICS Legacy-to-Modern Demo](https://img.youtube.com/vi/JeWW_vK4y34/hqdefault.jpg)](https://www.youtube.com/watch?v=JeWW_vK4y34&t=79s)
 
-<strong>▶️ Watch the Project Demonstration on YouTube</strong>
-
+<br>
 </p>
 
 ---
