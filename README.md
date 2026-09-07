@@ -8,7 +8,7 @@
   <em>CICS Mainframe Modernization Project — September 2026</em>
 </p>
 
----
+---I
 
 # What Happened
 
@@ -440,6 +440,10 @@ Watch the complete demonstration of the CICS Legacy-to-Modern project.
 </a>
 
 <br>
+
+### 🎥 Project Demonstration
+
+[![CICS Legacy-to-Modern Demo](https://img.youtube.com/vi/JeWW_vK4y34/maxresdefault.jpg)](https://www.youtube.com/watch?v=JeWW_vK4y34&t=79s)
 
 <strong>▶️ Watch the Project Demonstration on YouTube</strong>
 
