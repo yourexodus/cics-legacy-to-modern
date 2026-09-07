@@ -1,4 +1,4 @@
-# CICS-Legacy-to-Modern-CRUD
+# CICS-Legacy-CRUD
 
 ## Modernizing a COBOL CRUD Application: Mainframe Screens to Modern Architecture
 
