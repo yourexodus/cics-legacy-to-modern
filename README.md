@@ -130,29 +130,10 @@ This is where the screen fields, COBOL working-storage definitions, and CICS app
 </tr>
 
 <tr>
-<td valign="top">
-
-## STEP 5 — Compile & Link the Program
-
-The COBOL program and supporting resources must be compiled and linked before they can be executed by CICS.
-
-This required working with JCL and the mainframe development environment.
-
-</td>
 
 <td valign="top">
 
-### PROGRAM BUILD
-
-<img src="images/IMG_5107.jpeg" alt="Mainframe program build" width="500"/>
-
-</td>
-</tr>
-
-<tr>
-<td valign="top">
-
-## STEP 6 — Define & Install CICS Resources
+## STEP 5 — Define & Install CICS Resources
 
 After building the application components, I worked with CICS resource definitions and installation commands.
 
@@ -184,7 +165,7 @@ These resources are what allow CICS to locate and execute the application compon
 <tr>
 <td valign="top">
 
-## STEP 7 — Test & Debug
+## STEP 6 — Test & Debug
 
 Testing was a major part of the project.
 
@@ -223,7 +204,7 @@ This included troubleshooting:
 <tr>
 <td valign="top">
 
-## STEP 8 -  Fix the VSAM UPDATE Logic
+## STEP 7 -  Fix the VSAM UPDATE Logic
 
 One of the problems I encountered involved updating an existing VSAM record.
 
@@ -263,7 +244,7 @@ This allowed the updated information to be saved correctly.
 <tr>
 <td valign="top">
 
-## STEP 9 — Fix the VSAM Record Layout
+## STEP 8 - Fix the VSAM Record Layout
 
 Another issue involved the size and structure of the VSAM record.
 
@@ -293,7 +274,7 @@ This ensured that the fields matched correctly when moving data between the scre
 <tr>
 <td valign="top">
 
-## STEP 10 — Working CICS Application
+## STEP 9 — Working CICS Application
 
 After working through the build, configuration, testing, and debugging process, the application reached a working state.
 
