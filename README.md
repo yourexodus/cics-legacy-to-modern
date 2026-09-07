@@ -316,6 +316,14 @@ I documented the CICS commands and troubleshooting techniques used during develo
 ### Commands / Concepts
 
 - `CEDA DEFINE`
+- Define Resources in CICS (CEDA):3 min.
+Run CEDA commands to define and install your resources in CICS:
+CEDA DEFINE PROGRAM(MFRNMAPP) GROUP(MYGRP)
+CEDA DEFINE MAPSET(MFRNSET) GROUP(MYGRP)
+CEDA DEFINE TRANSACTION(MYTR) PROGRAM(MFRNMAPP) GROUP(MYGRP)
+CEDA DEFINE FILE(SKILLFILE) DSNAME(TSOCP01.ESK0G.SKILLS) GROUP(MYGRP)
+CEDA INSTALL GROUP(MYGRP)
+
 - `CEDA INSTALL`
 - `CEMT`
 - `CEDF`
