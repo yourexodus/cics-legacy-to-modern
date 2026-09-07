@@ -1,218 +1,516 @@
 # CICS-Legacy-to-Modern-CRUD
 
-Modernizing a COBOL CRUD Application: Mainframe Screens to Modern Architecture.
+## Modernizing a COBOL CRUD Application: Mainframe Screens to Modern Architecture
 
 <p align="center">
   <img src="images/Screen.png" alt="CICS Modernization Dashboard" width="700"/>
   <br>
-  <em>CICS Mainframe Modernization Project (Sept 2026)</em>
+  <em>CICS Mainframe Modernization Project — September 2026</em>
 </p>
 
-## Overview
+---
 
-This repository documents the modernization path for a legacy COBOL CRUD (Create, Read, Update, Delete) application running under CICS (Customer Information Control System) on an IBM z/OS mainframe. The project transitions a fixed-field terminal application into a flexible, service-oriented architecture.
+# What Happened
+
+This project documents my hands-on work rebuilding, testing, debugging, and modernizing a legacy COBOL CRUD application running under CICS on an IBM z/OS mainframe.
+
+The goal was not simply to rewrite the application.
+
+I wanted to demonstrate the actual work involved in taking a legacy mainframe application from:
+
+**BMS Map → JCL → COBOL → CICS Definitions → Testing → Debugging → Working Application**
+
+The project includes the mainframe development process, troubleshooting, VSAM record processing, CICS commands, and the transition toward a modern architecture.
 
 ---
 
-## Technical Components & File Directory
+# 🔧 Mainframe Build & Test Process
 
-This project combines traditional mainframe assets with modern DevOps tooling. The source code is organized as follows:
-## 📸 Project Resources
-
-Below is a snapshot of the resources created during the CICS Legacy-to-Modern project, including the COBOL program, BMS map, JCL, VSAM definitions, CICS commands, troubleshooting documentation, and development tools.
-
-![CICS Legacy-to-Modern Project Resources](images/IMG_5113.jpeg)
-
-### [<img src="https://raw.githubusercontent.com/microsoft/vscode/main/resources/linux/code.png" width="20" alt="VS Code icon" /> VS Code / TSO/ISPF Tools](#vscode-tools)
-
-This section includes links and cross-references for developing with IBM Z Open Editor:
-
-| Asset | Description |
-| :--- | :--- |
-| **Code Links PDF** | Documentation linking modern editor features to TSO/ISPF counterparts. |
-| **MAP: JCL** | JCL source for BMS Mapset compilation. |
-| **Copybook Source** | Shared COBOL definitions (Linkage Section). |
-
----
-
-### [<img src="https://img.icons8.com/wired/64/000000/mainframe.png" width="20" alt="Mainframe icon" /> TSO/ISPF & VSAM Data](#mainframe-source)
-
-Source and definitions for the mainframe components:
-
-- `mainframe/jcl/VSAM_DEF.jcl`: VSAM KSDS cluster definition.<img src="images/IMG_5107.jpeg" alt="vsam" width="700"/>
-- `mainframe/cobol/CICS_CRUD.cbl`: Main COBOL CICS program source.<img src="images/IMG_5114.jpeg" alt="CICS cobol" width="700"/>
-- `mainframe/bms/CICS_MAP.bms`: Basic Mapping Support mapset source.<img src="images/IMG_5109.jpeg" alt="CICS cobol" width="700"/>
-
-### VSAM Operations & Workflows
-
-Documented application flow and command usage for database operations:
-
-| Operation | Command Example | Documentation |
-| :---: | :--- | :--- |
-| **ADD** | `EXEC CICS WRITE` | [Detailed Workflow](images/VSAM_ADD.png) |
-| **DELETE** | `EXEC CICS DELETE` | [Detailed Workflow](images/VSAM_DELETE.png) |
-| **UPDATE** | `EXEC CICS REWRITE` | [Detailed Workflow](images/VSAM_UPDATE.png) |
-| **BROWSE** | `EXEC CICS STARTBR`/`READNEXT` | [Detailed Workflow](images/VSAM_BROWSE.png) |
-
----
-
-## [<img src="https://img.icons8.com/wired/64/000000/command-line.png" width="20" alt="Command Line icon" /> Mainframe Commands Used](#commands)
-
-The following CICS commands are utilized for testing, debugging, and system management. Click the links for application-specific usage guides:
-
-### [CICS Troubleshooting Guide (PDF)](./Troubleshooting.pdf)
-<p align="center">
-  <img src="images/IMG_5106.jpeg" alt="CICS Modernization Dashboard" width="700"/>
-  <br>
-  <em>CICS Mainframe Modernization Project (Sept 2026)</em>
-</p>
-Quick-reference document covering:
-
-* `CEDA DEFINE` and `INSTALL` commands for mapsets and libraries [[PDF](./Troubleshooting.pdf)][cite: 1]
-* `CEMT SET PROGRAM NEWCOPY` execution and status checks [[PDF](./Troubleshooting.pdf)][cite: 1]
-* Resolving `LOAD FAILED` errors and setting up custom `DSNAME` allocations [[PDF](./Troubleshooting.pdf)][cite: 1]
-
----
-
-## Modernized Components
-
-We have integrated the following modernized components:
-
-*   **Container-Based Services** for elastic scaling.
-*   **Web Interface (HTML/CSS/JS)** providing a responsive front-end.
-*   **REST APIs (Python Flask)** for secure, flexible service calls.
-*   **PostgreSQL DB** for high-performance open-source data management.
-
-## Migration Steps
-
-The application transition followed these logic steps:
-
-1.  **Map Field Definition:** Apply unprotected status to key screen fields.
-2.  **Data Retrieval:** 'Enter Year' function returns all other record fields.
-
-## Project Transition
-
-### 📸 Project Transition
-
-**BEFORE: Original Screen Capture**  
-## 🎥 Project Demonstration
-
-Watch the video demonstration of my IBM CICS Legacy-to-Modern application:
-
-[![IBM CICS Legacy-to-Modern Project](https://img.youtube.com/vi/JeWW_vK4y34/maxresdefault.jpg)]([https://youtu.be/JeWW_vK4y34](https://youtu.be/JeWW_vK4y34?si=duCaV1liGZre0cfw))
-
-**▶️ Watch the Project Demonstration on YouTube**
-
-**AFTER: Modernized Screen Capture**  
-![Modernized Screen Capture](path/to/after-image.png)
-
-## Project Status
-
-This modernization effort is currently:
-
-<p align="center">
-  **Wrapping Up Soon**
-  <br>
-  <img src="images/project_status_bar.png" alt="Project status: wrapping up" width="300" />
-</p>
-<table border="0" width="100%">
+<table>
 <tr>
-<td width="50%" valign="top">
+<th width="50%">WHAT HAPPENED</th>
+<th width="50%">EVIDENCE / RESULT</th>
+</tr>
 
-### 🛠️ VS Code / TSO/ISPF Tools
-* [Code Links PDF](./docs/code-links.pdf)
-* [MAP: JCL](./jcl/map.jcl)
-* [Copybook Source](./cobol/copybooks/)
+<tr>
+<td valign="top">
 
----
+## STEP 1 — Build the BMS MAP
 
-### 💾 TSO/ISPF & VSAM Data
-* **VSAM:** JCL
-* **Program Source**
-* **BMS Mapset Source**
-* **VSAM Operations:** `ADD`, `DELETE`, `BROWSE`, `UPDATE`
+The first step was creating and modifying the BMS map used by the CICS application.
 
----
+The map defines the fields, screen positions, attributes, and terminal layout used by the application.
 
-### 💻 Mainframe Commands Used
-* `CEMT`, `CEDF`: Brief command usage
-* `CEDF`: Operation used commands usage
-* `CEMT`: Add three field command usage
-* `BROWSE`: Add/Delete usage
-* `UPDATE`: Update/Find command usage
-
----
-
-### 🎥 CICS Demo (Sept 2026)
-[![CICS Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+I also worked through map formatting and compilation issues while getting the screen into the structure required by the COBOL program.
 
 </td>
-<td width="50%" valign="top">
 
-### 🚀 Modernized Components
-**Modernized components added:**
-* Container-Based Services
-* Web Interface (HTML/CSS/JS)
-* REST APIs (Python Flask)
-* PostgreSQL DB
+<td valign="top">
 
----
+### BMS MAP
 
-### 📋 Migration Steps
-`1. Apply unprotected to key fields` ➔ `2. Enter Year: Returns other fields`
+<img src="images/MFRNSET.jpg" alt="BMS Map" width="500"/>
 
----
+<br>
 
-### 📸 Project Transition
+Additional project resource:
 
-### 📸 Project Transition
+<img src="images/IMG_5109.jpeg" alt="BMS Map Development" width="500"/>
 
-**BEFORE: Original Screen Capture**  
-![BEFORE](./assets/before-screen.png)
-
-Here is my latest project update:
-### 📸 Project Transition
- 
-
-**BEFORE: Original Screen Capture**  
-![BEFORE](./assets/before-screen.png)
-
-Here is my latest project update video:
-
-[![Watch Project Demo Video](https://img.youtube.com/vi/ETWInBeipTk/maxresdefault.jpg)](https://www.youtube.com/watch?v=ETWInBeipTk)
-
-Check out the repository below for details.  
-
-**AFTER: Modernized Screen Capture**  
-![AFTER](./assets/after-screen.png) 
-
-**AFTER: Modernized Screen Capture**  
-![AFTER](./assets/after-screen.png)
-
-Check out the repository below for details.  
-
-**AFTER: Modernized Screen Capture**  
-![AFTER](./assets/after-screen.png)
-
----
-
-### 📊 Example of issues I experienced
-** VSAM Record Update Issue**
- 
-Problem: When I updated a record, fields like Role/Title and Skills were getting blanked out.
-Cause: The program was moving the screen data before the VSAM READ UPDATE, which replaced my changes with the old record.
-Fix: I changed the order so the screen data is moved after the READ UPDATE and before the REWRITE. This allowed my updated information to save correctly.
-![AFTER](./assets/after-screen.png)
-**VSAM Record Layout Issue**
- 
-Problem: Some data was shifting, getting truncated, or not saving correctly.
-Cause: The Working-Storage record layout didn't fully match the VSAM record structure.
-Fix: I aligned the record layout to the VSAM file at 205 bytes, making sure the fields matched correctly when moving data between the screen and VSAM
-![AFTER](./assets/after-screen.png)
 </td>
 </tr>
+
+<tr>
+<td valign="top">
+
+## STEP 2 — Run the MAP JCL
+
+The BMS source had to be processed through JCL so that the mapset and associated generated resources could be created for the CICS application.
+
+This step was part of rebuilding the mainframe application environment rather than simply editing COBOL.
+
+</td>
+
+<td valign="top">
+
+### MAP / JCL DEVELOPMENT
+
+<img src="images/IMG_5108.jpeg" alt="MAP JCL development" width="500"/>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+
+## STEP 3 — Connect the COBOL Program to the MAP
+
+The COBOL CICS program uses the generated map and copybook definitions to communicate with the terminal screen.
+
+This is where the screen fields, COBOL working-storage definitions, and CICS application logic have to line up correctly.
+
+</td>
+
+<td valign="top">
+
+### COBOL / CICS PROGRAM
+
+<img src="images/IMG_5114.jpeg" alt="COBOL CICS Program" width="500"/>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+
+## STEP 4 — Compile & Link the Program
+
+The COBOL program and supporting resources must be compiled and linked before they can be executed by CICS.
+
+This required working with JCL and the mainframe development environment.
+
+</td>
+
+<td valign="top">
+
+### PROGRAM BUILD
+
+<img src="images/IMG_5107.jpeg" alt="Mainframe program build" width="500"/>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+
+## STEP 5 — Define & Install CICS Resources
+
+After building the application components, I worked with CICS resource definitions and installation commands.
+
+This included working with commands such as:
+
+`CEDA DEFINE`
+
+`CEDA INSTALL`
+
+`CEMT`
+
+These resources are what allow CICS to locate and execute the application components.
+
+</td>
+
+<td valign="top">
+
+### CICS RESOURCE CONFIGURATION
+
+<img src="images/IMG_5106.jpeg" alt="CICS resource configuration" width="500"/>
+
+<br>
+
+📄 [CICS Troubleshooting Guide](./Troubleshooting.pdf)
+
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+
+## STEP 6 — Test & Debug
+
+Testing was a major part of the project.
+
+I used CEDF to step through the CICS program and investigate problems during execution.
+
+This included troubleshooting:
+
+- CICS resource problems
+- MAP loading issues
+- VSAM processing
+- Record layout problems
+- UPDATE/REWRITE behavior
+- Program execution errors
+
+</td>
+
+<td valign="top">
+
+### CEDF / DEBUGGING
+
+<img src="images/debugupdate.jpg" alt="CEDF debugging" width="500"/>
+
+<br>
+
+### CICS ERROR INVESTIGATION
+
+<img src="images/TheCICSERROR.jpg" alt="CICS troubleshooting" width="500"/>
+
+<br>
+
+📄 [Troubleshooting Guide](./Troubleshooting.pdf)
+
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+
+## STEP 7 — Fix the VSAM UPDATE Logic
+
+One of the problems I encountered involved updating an existing VSAM record.
+
+### Problem
+
+Fields such as Role/Title and Skills were being blanked out after an update.
+
+### Cause
+
+The program was moving screen data before the VSAM READ UPDATE operation.
+
+The existing record data was then replacing the values I had entered.
+
+### Fix
+
+I changed the order of operations so the existing record was read first, then the screen data was moved into the record before the REWRITE.
+
+This allowed the updated information to be saved correctly.
+
+</td>
+
+<td valign="top">
+
+### UPDATE ISSUE
+
+<img src="images/FixrewriteIssue.jpg" alt="VSAM rewrite issue fix" width="500"/>
+
+<br>
+
+### ORIGINAL ERROR
+
+<img src="images/Issue_RewriteFailed.jpg" alt="VSAM rewrite failure" width="500"/>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+
+## STEP 8 — Fix the VSAM Record Layout
+
+Another issue involved the size and structure of the VSAM record.
+
+Some data was shifting, being truncated, or not being saved correctly.
+
+### Cause
+
+The COBOL Working-Storage record layout did not completely match the VSAM file structure.
+
+### Fix
+
+I aligned the COBOL record layout with the VSAM record structure at **205 bytes**.
+
+This ensured that the fields matched correctly when moving data between the screen and VSAM.
+
+</td>
+
+<td valign="top">
+
+### VSAM RECORD STRUCTURE
+
+<img src="images/actualfilesize.jpg" alt="VSAM record size and structure" width="500"/>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+
+## STEP 9 — Working CICS Application
+
+After working through the build, configuration, testing, and debugging process, the application reached a working state.
+
+The final application demonstrates the CRUD workflow running through CICS.
+
+</td>
+
+<td valign="top">
+
+### WORKING APPLICATION
+
+<img src="images/cicsapp.jpg" alt="Working CICS application" width="500"/>
+
+</td>
+</tr>
+
 </table>
+
 ---
 
+# 💾 VSAM CRUD Operations
 
-[Github Repository Mockup Visualization Reference](images/README_Storyboard.png)
+The application demonstrates the four fundamental CRUD operations:
+
+| Operation | CICS Operation | Purpose |
+|---|---|---|
+| **CREATE** | `EXEC CICS WRITE` | Add a new record |
+| **READ** | `EXEC CICS READ` | Retrieve a record |
+| **UPDATE** | `EXEC CICS REWRITE` | Modify an existing record |
+| **DELETE** | `EXEC CICS DELETE` | Remove a record |
+| **BROWSE** | `STARTBR / READNEXT` | Browse multiple records |
+
+---
+
+# 💻 CICS Commands & Troubleshooting
+
+I documented the CICS commands and troubleshooting techniques used during development.
+
+### Commands / Concepts
+
+- `CEDA DEFINE`
+- `CEDA INSTALL`
+- `CEMT`
+- `CEDF`
+- `NEWCOPY`
+- MAPSET installation
+- Program installation
+- CICS resource troubleshooting
+- VSAM troubleshooting
+
+### Project Documentation
+
+📄 **[CICS Commands Reference](./Cics_commands.pdf)**
+
+📄 **[CICS Troubleshooting Guide](./Troubleshooting.pdf)**
+
+---
+
+# 📸 Project Resources
+
+The project contains screenshots documenting the actual development process, including:
+
+- COBOL source
+- BMS map development
+- CICS configuration
+- VSAM processing
+- Debugging
+- Error investigation
+- Record layout troubleshooting
+- Working application screens
+
+<p align="center">
+  <img src="images/IMG_5113.jpeg" alt="CICS Legacy-to-Modern Project Resources" width="700"/>
+</p>
+
+---
+
+# 🔄 Project Transition
+
+## BEFORE — Legacy Mainframe Screen
+
+The original application uses the traditional fixed-field 3270 CICS interface.
+
+<p align="center">
+  <img src="images/Screen.png" alt="Legacy CICS Screen" width="700"/>
+</p>
+
+---
+
+## AFTER — Modernized Direction
+
+The modernization effort moves the application toward a more flexible architecture while preserving the underlying business logic and CRUD functionality.
+
+The goal is to demonstrate how legacy mainframe applications can be understood, maintained, debugged, and modernized without losing the business processes they already perform.
+
+---
+
+# 🚀 Modernization Architecture
+
+The modernization direction includes:
+
+- COBOL / CICS business logic
+- CICS Channels & Containers
+- Web-based interface
+- HTML / CSS / JavaScript
+- REST API architecture
+- Python / Flask
+- PostgreSQL
+- Modern development tooling
+
+The important distinction is that the modernization does not require throwing away the existing business logic.
+
+The goal is to expose and modernize it.
+
+---
+
+# 📊 What I Actually Had to Troubleshoot
+
+This project was not a simple code conversion.
+
+I encountered and resolved problems involving:
+
+### BMS Map Issues
+
+Map formatting, field attributes, generated map resources, and compilation.
+
+### JCL Issues
+
+Building and executing the jobs required to process the application components.
+
+### CICS Issues
+
+Resource definitions, installations, program availability, MAP loading, and execution.
+
+### VSAM Issues
+
+Record layouts, record length, READ UPDATE behavior, REWRITE processing, and data integrity.
+
+### COBOL Issues
+
+Screen-to-record data movement, Working-Storage alignment, and CICS program flow.
+
+### CEDF Debugging
+
+Stepping through CICS execution to determine what was actually happening at runtime.
+
+---
+
+# 🎥 Project Demonstration
+
+Watch the complete demonstration of the CICS Legacy-to-Modern project.
+
+<p align="center">
+
+<a href="https://youtu.be/JeWW_vK4y34">
+
+<img src="https://img.youtube.com/vi/JeWW_vK4y34/maxresdefault.jpg"
+     alt="CICS Legacy-to-Modern Project Demonstration"
+     width="700"/>
+
+</a>
+
+<br>
+
+<strong>▶️ Watch the Project Demonstration on YouTube</strong>
+
+</p>
+
+---
+
+# 🧠 What This Project Demonstrates
+
+This project demonstrates hands-on experience with:
+
+- COBOL
+- CICS
+- BMS
+- JCL
+- VSAM
+- TSO/ISPF
+- CEDF
+- CEMT
+- Mainframe troubleshooting
+- CRUD application development
+- Legacy application maintenance
+- Application modernization
+- Debugging
+- Data structure alignment
+- Mainframe-to-modern architecture concepts
+
+---
+
+# 📁 Project Documentation
+
+| Resource | Description |
+|---|---|
+| 📄 [CICS Commands](./Cics_commands.pdf) | CICS command reference |
+| 📄 [Troubleshooting Guide](./Troubleshooting.pdf) | CICS troubleshooting and solutions |
+| 🖼️ [Project Resources](./images/IMG_5113.jpeg) | Snapshot of project resources |
+| 🖼️ [CICS Application](./images/cicsapp.jpg) | Working application |
+| 🖼️ [Debugging](./images/debugupdate.jpg) | CEDF/debugging evidence |
+| 🖼️ [VSAM Update Fix](./images/FixrewriteIssue.jpg) | UPDATE/REWRITE troubleshooting |
+| 🖼️ [VSAM Record Layout](./images/actualfilesize.jpg) | Record structure investigation |
+
+---
+
+# 📌 Project Status
+
+<p align="center">
+
+### Wrapping Up Soon
+
+<img src="images/Screen.png"
+     alt="CICS project"
+     width="500"/>
+
+</p>
+
+The mainframe CRUD application has been rebuilt, tested, debugged, and documented.
+
+The remaining work is focused on presenting the modernization story clearly and connecting the legacy implementation to the modern architecture.
+
+---
+
+## 👩🏽‍💻 Project Author
+
+**Marlainna Francis**
+
+COBOL • CICS • JCL • VSAM • Python • SQL • Data Analytics
+
+---
+
+### ⭐ The goal of this project
+
+**Show the work — not just the finished application.**
+
+From the BMS map and JCL...
+
+to COBOL...
+
+to CICS...
+
+to VSAM...
+
+to CEDF debugging...
+
+to a working CRUD application.
+
+This repository documents the journey.
