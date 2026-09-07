@@ -95,9 +95,13 @@ The application transition followed these logic steps:
 ### 📸 Project Transition
 
 **BEFORE: Original Screen Capture**  
-[![Original Screen Capture](path/to/before-image.png)](https://www.linkedin.com/feed/update/urn:li:ugcPost:7502364357662658560)
+## 🎥 Project Demonstration
 
-Check out the update on [LinkedIn](https://www.linkedin.com/feed/update/urn:li:ugcPost:7502364357662658560).
+Watch the video demonstration of my IBM CICS Legacy-to-Modern application:
+
+[![IBM CICS Legacy-to-Modern Project](https://img.youtube.com/vi/JeWW_vK4y34/maxresdefault.jpg)](https://youtu.be/JeWW_vK4y34)
+
+**▶️ Watch the Project Demonstration on YouTube**
 
 **AFTER: Modernized Screen Capture**  
 ![Modernized Screen Capture](path/to/after-image.png)
