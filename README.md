@@ -89,8 +89,8 @@ in Cics.
   <td valign="top">
 <img src="images/IMG_5107.jpeg" alt="COBOL CICS Program" 
   <br>
-[![Watch the VSAM Demo](https://img.youtube.com/vi/Bd7wDpB8-lQ/hqdefault.jpg)](https://www.youtube.com/watch?v=Bd7wDpB8-lQ)
-   
+[![Watch the VSAM Demo](https://img.youtube.com/vi/Bd7wDpB8-lQ/hqdefault.jpg)](youtube.com/watch?v=Bd7wDpB8-lQ&feature=youtu.be)
+  
 </td>
 
 </td>
