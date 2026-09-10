@@ -89,7 +89,7 @@ in Cics.
   <td valign="top">
 <img src="images/IMG_5107.jpeg" alt="COBOL CICS Program" 
   <br>
-[![Watch the VSAM Demo](https://img.youtube.com/vi/Bd7wDpB8-lQ/hqdefault.jpg)](youtube.com/watch?v=Bd7wDpB8-lQ&feature=youtu.be)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7wDpB8-lQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   
 </td>
 
