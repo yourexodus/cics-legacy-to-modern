@@ -90,7 +90,6 @@ in Cics.
 <img src="images/IMG_5107.jpeg" alt="COBOL CICS Program" 
   <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bd7wDpB8-lQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  
 </td>
 
 </td>
